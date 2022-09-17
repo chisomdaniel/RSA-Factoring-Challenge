@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+import sys
+
+file1 = sys.argv[1]
+with open(file1, 'r') as fd:
+    for i in fd:
+        num = int(i)
+        for q in range(2, num):
+            if num % q == 0:
+                p = num // q
+                print("{}={}*{}".format(num, p, q))
+                break
